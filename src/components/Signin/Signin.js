@@ -33,7 +33,7 @@ const Signin = () => {
                 <input className='block my-6 p-3 w-3/4 mx-auto text-white font-semibold text-lg cursor-pointer bg-major hover:bg-submajor' type="submit" value="Sign in" />
             </form>
             <div className='w-3/4 mx-auto flex justify-between'>
-                <p className=' font-medium'>New at food court? <Link to='signup' className='text-green'> Sign up</Link></p>
+                <p className=' font-medium'>New at food court? <span onClick={() => navigate('/signup')} className='text-green cursor-pointer'> Sign up</span></p>
                 <p><span className='text-green cursor-pointer font-medium'>Forgot password</span></p>
             </div>
             <div className='flex items-center w-3/4 mx-auto gap-4'>

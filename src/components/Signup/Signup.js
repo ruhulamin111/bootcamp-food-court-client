@@ -14,7 +14,10 @@ const Signup = () => {
         event.preventDefault()
         const email = event.target.email.value;
         const password = event.target.password.value;
-        createUserWithEmailAndPassword(email, password)
+        const confirmpassword = event.target.confirmpassword.value;
+        if (password === confirmpassword) {
+            createUserWithEmailAndPassword(email, password)
+        }
         event.target.resent()
         navigate(from, { replace: true })
     }
@@ -25,14 +28,18 @@ const Signup = () => {
 
     return (
         <div className='w-6/12 mx-auto bg-minor p-8 my-8'>
-            <h2 className='text-center font-semibold text-3xl'>Sing in </h2>
-            <form onSubmit={handleSubmit} >
-                <input name='email' className='block my-6 p-3 w-3/4 mx-auto' type="text" placeholder='Email' required />
-                <input name='password' className='block my-6 p-3 w-3/4 mx-auto' type="password" placeholder='Password' required />
-                <input className='block my-6 p-3 w-3/4 mx-auto text-white font-semibold text-lg cursor-pointer bg-major hover:bg-submajor' type="submit" value="Sign in" />
+            <h2 className='text-center font-semibold text-3xl'>Sing up </h2>
+            <form onSubmit={handleSubmit} className='w-3/4 mx-auto'>
+                <label htmlFor="email">Name</label>
+                <input name='email' className='block my-3 p-3 w-full' type="text" placeholder='Email' required />
+                <label htmlFor="email">Password</label>
+                <input name='password' className='block my-3 p-3 w-full' type="password" placeholder='Password' required />
+                <label htmlFor="email">Confirm password</label>
+                <input name='confirmpassword' className='block my-3 p-3 w-full' type="password" placeholder='Confirm password' required />
+                <input className='block my-8 p-3 w-full text-white font-semibold text-lg cursor-pointer bg-major hover:bg-submajor' type="submit" value="Sign up" />
             </form>
             <div className='w-3/4 mx-auto flex justify-between'>
-                <p className=' font-medium'>New at food court? <Link to='signup' className='text-green'> Sign up</Link></p>
+                <p className=' font-medium'>New at food court? <span onClick={() => navigate('/signin')} className='text-green cursor-pointer'> Sign ip</span></p>
                 <p><span className='text-green cursor-pointer font-medium'>Forgot password</span></p>
             </div>
             <div className='flex items-center w-3/4 mx-auto gap-4'>
