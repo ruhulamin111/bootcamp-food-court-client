@@ -4,6 +4,7 @@ const MainCourse = () => {
     return (
         <div>
             <h2>main course</h2>
+
         </div>
     );
 };

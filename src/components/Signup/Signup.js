@@ -1,12 +1,11 @@
 import React from 'react';
 
-const Desart = () => {
+const Signup = () => {
     return (
         <div>
-            <h2>desart</h2>
-
+            <h2>sign up </h2>
         </div>
     );
 };
 
-export default Desart;
+export default Signup;

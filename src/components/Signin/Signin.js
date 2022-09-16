@@ -1,12 +1,11 @@
 import React from 'react';
 
-const Desart = () => {
+const Signin = () => {
     return (
         <div>
-            <h2>desart</h2>
-
+            <h2>sing in </h2>
         </div>
     );
 };
 
-export default Desart;
+export default Signin;
