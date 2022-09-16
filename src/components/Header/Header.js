@@ -3,6 +3,8 @@ import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { NavLink } from 'react-router-dom'
 import auth from '../../firebase.int';
+import { useCart } from '../../hooks/useCart';
+import Cart from '../Cart/Cart';
 
 const Header = () => {
     const active = ({ isActive }) => {
@@ -11,6 +13,7 @@ const Header = () => {
         }
     }
     const [user] = useAuthState(auth)
+    const [order] = useCart()
 
     return (
         <div className='bg-submajor sticky top-0'>
@@ -25,7 +28,7 @@ const Header = () => {
                     <NavLink style={active} className='ml-10 text-xl  text-white' to='/appitizers'>Appitizers</NavLink>
                     <NavLink style={active} className='ml-10 text-xl  text-white' to='/maincourse'>Main Course</NavLink>
                     <NavLink style={active} className='ml-10 text-xl  text-white' to='/desart'>Desart</NavLink>
-                    <NavLink style={active} className='ml-10 text-xl  text-white' to='/about'>About</NavLink>
+                    <NavLink style={active} className='ml-10 text-xl  text-white' to='/cart'>Cart <sup >{order.length ? order.length : 0}</sup></NavLink>
                     {user ? <NavLink style={active} className='ml-10 text-xl  text-white border-2 p-2' onClick={() => signOut(auth)} >Sign out</NavLink> :
                         <NavLink style={active} className='ml-10 text-xl  text-white border-2 p-2' to='/signin'>Sign in</NavLink>
                     }

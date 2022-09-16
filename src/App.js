@@ -7,10 +7,12 @@ import NotFound from './components/NotFound/NotFound';
 import Appitizers from './components/Appitizers/Appitizers';
 import MainCourse from './components/MainCourse/MainCourse';
 import Desart from './components/Desart/Desart';
-import About from './components/About/About';
 import Signin from './components/Signin/Signin';
 import Signup from './components/Signup/Signup';
-
+import RequireAuth from './components/RequireAuth/RequireAuth';
+import Cart from './components/Cart/Cart';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   return (
@@ -22,13 +24,15 @@ function App() {
         <Route path='/appitizers' element={<Appitizers></Appitizers>}></Route>
         <Route path='/maincourse' element={<MainCourse></MainCourse>}></Route>
         <Route path='/desart' element={<Desart></Desart>}></Route>
-        <Route path='/about' element={<About></About>}></Route>
         <Route path='/signin' element={<Signin></Signin>}></Route>
         <Route path='/signup' element={<Signup></Signup>}></Route>
+        <Route path='/cart' element={<RequireAuth>
+          <Cart></Cart></RequireAuth>}></Route>
 
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>
+      <ToastContainer></ToastContainer>
 
     </div>
   );
