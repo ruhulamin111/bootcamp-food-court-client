@@ -12,6 +12,8 @@ module.exports = {
       'minor': '#fcbf49',
       'white': '#ffffff',
       'black': '#000',
+      'green': '#386641',
+
     },
   },
   plugins: [],

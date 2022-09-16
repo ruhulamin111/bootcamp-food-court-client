@@ -16,8 +16,8 @@ const Footer = () => {
                 <div>
                     <h2 className='text-white text-xl font-semibold'>Join with us</h2>
                     <form onSubmit={handleSubmit} >
-                        <input className='block my-4 p-2 w-full' type="email" placeholder='email' />
-                        <textarea className='block w-full p-2 my-4' type="text" placeholder=' comments' />
+                        <input className='block my-4 p-2 w-full' type="email" placeholder='Email' />
+                        <textarea className='block w-full p-2 my-4' type="text" placeholder=' Comments' />
                         <input className='py-1 hover:bg-submajor text-lg  border bg-major px-5 text-white' type="submit" value="Subscribe" />
                     </form>
                 </div>
