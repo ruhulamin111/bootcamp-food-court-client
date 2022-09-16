@@ -11,7 +11,7 @@ const Apitem = ({ item }) => {
         if (check) {
             return toast('Already selected')
         }
-        fetch('http://localhost:5000/orders', {
+        fetch('https://powerful-wave-76590.herokuapp.com/orders', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

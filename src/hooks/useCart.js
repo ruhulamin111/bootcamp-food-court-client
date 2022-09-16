@@ -4,7 +4,7 @@ const useCart = () => {
     const [order, setOrder] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:5000/orders')
+        fetch('https://powerful-wave-76590.herokuapp.com/orders')
             .then(res => res.json())
             .then(data => setOrder(data))
     }, [order])

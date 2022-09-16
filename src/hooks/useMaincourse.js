@@ -4,7 +4,7 @@ const useMaincourse = () => {
     const [maincourse, setMaincourse] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/maincourse')
+        fetch('https://powerful-wave-76590.herokuapp.com/maincourse')
             .then(res => res.json())
             .then(data => setMaincourse(data))
     }, [maincourse])

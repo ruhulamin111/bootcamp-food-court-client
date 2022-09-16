@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 const useAppitizers = () => {
     const [appitizers, setAppitizers] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/appitizers')
+        fetch('https://powerful-wave-76590.herokuapp.com/appitizers')
             .then(res => res.json())
             .then(data => setAppitizers(data))
     }, [appitizers])

@@ -7,7 +7,7 @@ const Cart = () => {
     const [order] = useCart()
     const confirmOrder = () => {
         // const confirm = order.map(product => product)
-        fetch('http://localhost:5000/orders', {
+        fetch('https://powerful-wave-76590.herokuapp.com/orders', {
             method: 'DELETE',
             body: JSON.stringify(order)
         })

@@ -2,7 +2,7 @@ import React from 'react';
 
 const CartList = ({ product }) => {
     const remove = (selected) => {
-        fetch('http://localhost:5000/orders', {
+        fetch('https://powerful-wave-76590.herokuapp.com/orders', {
             method: 'DELETE',
             body: JSON.stringify(selected)
         })
