@@ -11,6 +11,7 @@ module.exports = {
       'submajor': '#f77f00',
       'minor': '#fcbf49',
       'white': '#ffffff',
+      'black': '#000',
     },
   },
   plugins: [],
