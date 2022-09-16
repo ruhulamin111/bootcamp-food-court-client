@@ -27,7 +27,7 @@ const DesItem = ({ item }) => {
             <p className='text-xl font-medium my-4'>{name}</p>
             <div className='flex justify-between'>
                 <p className='font-medium'>Price: {price} $</p>
-                <button className='py-1 hover:bg-submajor text-lg border bg-major px-5 float-right text-white' onClick={() => order(item)}>Order</button>
+                <button className='py-1 hover:bg-submajor text-lg border bg-major px-5 float-right text-white' onClick={() => order(item)}>Add to Cart</button>
             </div>
         </div>
     );
