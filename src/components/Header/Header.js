@@ -9,7 +9,7 @@ const Header = () => {
     }
 
     return (
-        <div className='bg-submajor'>
+        <div className='bg-submajor sticky top-0'>
             <nav className='w-11/12 mx-auto flex justify-between items-center h-20'>
                 <div>
                     <NavLink to='/' className='text-2xl uppercase font-medium text-white'>
@@ -17,7 +17,7 @@ const Header = () => {
                     </NavLink>
                 </div>
                 <div>
-                    <NavLink style={active} className='ml-10 text-xl  text-white' to='/home'>Home</NavLink>
+                    <NavLink style={active} className='ml-10 text-xl  text-white ' to='/home'>Home</NavLink>
                     <NavLink style={active} className='ml-10 text-xl  text-white' to='/appitizers'>Appitizers</NavLink>
                     <NavLink style={active} className='ml-10 text-xl  text-white' to='/maincourse'>Main Course</NavLink>
                     <NavLink style={active} className='ml-10 text-xl  text-white' to='/desart'>Desart</NavLink>
