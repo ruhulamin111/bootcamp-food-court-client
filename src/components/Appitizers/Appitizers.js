@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { useAppitizers } from '../../hooks/useAppitizers';
 import Apitem from './Apitem/Apitem';
 

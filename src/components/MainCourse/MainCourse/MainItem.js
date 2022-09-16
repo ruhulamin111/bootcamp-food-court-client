@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Apitem = ({ item }) => {
+const MainItem = ({ item }) => {
     const { _id, name, img, description, price } = item;
 
     return (
@@ -15,4 +15,4 @@ const Apitem = ({ item }) => {
     );
 };
 
-export default Apitem;
+export default MainItem;
